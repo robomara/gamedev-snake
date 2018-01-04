@@ -1,0 +1,28 @@
+ <!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Snake</title>
+		<script src="js/phaser.js"></script>
+		<script src="js/boot.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/gameOver.js"></script>
+		<style>
+			body{
+				padding: 0px;
+				margin: 0px;
+				background: black;
+			}
+		</style>  
+	</head>
+	
+	<body>
+		<script>
+			var game = new Phaser.Game(640, 480, Phaser.AUTO);
+			game.state.add('bootState',bootState);
+			game.state.add('mainState',mainState);
+			game.state.add('gameOverState',gameOverState);
+			game.state.start('bootState');
+		</script>
+	</body>
+</html>
